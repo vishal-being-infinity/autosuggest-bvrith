@@ -21,17 +21,18 @@ function toggleUser() {
   genTxt.textContent = users[index].gender;
 }
 
-async function getRandomUser() {
-  try {
-    const response = await fetch('https://randomuser.me/api/');
-    const data = await response.json();
-    const user = data.results[0];
+function getRandomUser() {
+  fetch("https://randomuser.me/api/")
+    .then(response => response.json())
+    .then(data => {
+      const user = data.results[0];
 
-    document.getElementById('user-avatar').src = user.picture.large;
-    document.getElementById('user-name').textContent = user.name.first + " " + user.name.last;
-    document.getElementById('user-gender').textContent = user.gender;
-    
-  } catch (error) {
-    console.error(error);
-  }
+      document.getElementById("user-avatar").src = user.picture.large;
+      document.getElementById("user-name").textContent =
+        user.name.first + " " + user.name.last;
+      document.getElementById("user-gender").textContent = user.gender;
+    })
+    .catch(error => {
+      console.error(error);
+    });
 }

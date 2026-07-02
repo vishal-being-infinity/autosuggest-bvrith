@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/" target="_blank">Github</a>
+    <a href="https://github.com/" target="_blank">Leetcode</a>
+    <a href="./html/autosuggest.html">Auto Suggest</a>
+  </nav>
+
+  <div class="page-header">
+    <h1 class="page-title">Home Page</h1>
+    <p class="page-description">
+      This page contains operations on user cards.
+    </p>
+    <p class="page-subtitle">
+      You can view, toggle, get random users, and much more.
+    </p>
+  </div>
+
+  <div class="user-card">
+    <div class="user-image">
+      <img src="./static/jane.png" id="user-avatar" alt="Avatar">
+    </div>
+
+    <div class="user-details">
+      <h2 id="user-name">Jane Doe</h2>
+      <p id="user-gender">Female</p>
+    </div>
+
+    <button onclick="toggleUser()" class="action-button">Toggle</button>
+    <button onclick="getRandomUser()" class="action-button">Get Random User</button>
+    <button onclick="getRandomUser()" class="action-button">My Random User</button>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
